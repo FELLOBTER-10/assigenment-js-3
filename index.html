@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark </title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stayel.css">
+
+</head>
+
+<body>
+
+
+    <div class="HOME">
+        <div class="container d-flex justify-content-center align-items-center flex-column ">
+
+            <h1 class="text-center p-2 position-relative titel ">Bookmarker</h1>
+
+            <div
+                class="bookmark-body w-100 p-3 py-4 mt-5 d-flex justify-content-center align-items-center flex-column gap-4 ">
+
+
+                <h2> <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites<i
+                        class="fa-solid fa-bookmark"></i> </h2>
+
+
+                <div class=" Site-Name w-100 d-flex justify-content-center flex-column">
+
+                    <label class="pb-2 fw-semibold" for="BookmarkName"> <i class="fa-solid fa-book-bookmark"></i> Site
+                        Name</label>
+
+                    <input type="text" placeholder="Bookmark Name" id="BookmarkName" class="form-control ">
+                    <div class="alert alert-danger " id="alertNameInput">Invalid Name</div>
+                </div>
+
+
+                <div class=" site-url w-100 d-flex justify-content-center flex-column">
+
+                    <label class="pb-2 fw-semibold" for="BookmarkUrl"> <i class="fa-solid fa-link"></i> Site Name
+                    </label>
+                    <input type="url" placeholder="website Url" id="BookmarkUrl" class="form-control  ">
+                    <div class="alert alert-success " id="alertUrlInput">Invalid Url</div>
+                </div>
+
+
+                <button onclick=" submite()" class="btn btn-dark px-5 " id="submitebtn">Submit</button>
+                <button onclick="EditData() " class="btn btn-warning px-5  " id="UpdateBtn">Update</button>
+
+                <div class="line"></div>
+
+
+
+
+                <table class="table mt-4 text-center ">
+
+
+                    <thead>
+
+                        <tr>
+                            <th class="text-capitalize"> index </th>
+                            <th class="text-capitalize"> Website Name</th>
+                            <th class="text-capitalize">Update</th>
+                            <th class="text-capitalize"> Visite</th>
+                            <th class="text-capitalize">Delete</th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableData">
+                      
+                    </tbody>
+
+                </table>
+            </div>
+
+
+            <div class="Boxcontainer w-100 h-100" id="Boxcontainer">
+
+                <div class="innerBox bg-white p-4 rounded-2 shadow-lg">
+                    <header class="w-100 d-flex justify-content-between align-items-center mb-4">
+                        <div class="d-flex circle ">
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                        </div>
+                        <button class="btn border-0" id="closeBox">
+                            <i class="fa-solid fa-xmark close fs-3"></i>
+                        </button>
+                    </header>
+
+                    <p class=" m-0 fs-3 pb-2 fw-bold"> Site Name or Url is not valid, Please follow the rules below:</p>
+
+                    <ol class="rules list-unstyled m-0">
+
+                        <li class="fs-4"> <i class="fa-regular fa-circle-right p-2"></i> Site name must contain at least
+                            3 characters
+                        </li>
+
+                        <li class="fs-4"><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
